@@ -30,7 +30,7 @@ class wait_for_app:
         start_time = current = time.time()
         end_time = start_time + timeout
 
-        while current < end_time:
+        while True:
             tries += 1
             self.app = ("%s:%d") %(host,port)
             sk = socket.socket()
@@ -54,13 +54,13 @@ class wait_for_app:
                 # if we fail, sleep a bit
                 time.sleep(retry_interval)
             current = time.time()
+            if current >= end_time and timeout != 0:
+                break
 
         end_ts = int(time.time())
         diff_ts= end_ts - start_ts
         logmsg = self.build_log(5, self.app, diff_ts)
         self.log(logmsg)
-
-
 
     def get_parser(self):
         parser = OptionParser()
