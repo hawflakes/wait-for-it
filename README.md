@@ -18,7 +18,7 @@ Options:
 
 ## Examples
 
-For example, let's test to see if we can access port 80 on www.baidu.com, and if it is available, the script will print the successful message `wait-for-it.py: www.baidu.com:80 is available after n seconds`,where the n is the waiting seconds,otherwise it will output the timeout message `wait-for-it.py: timeout occurred after waiting n seconds for wait-for-it.py`,where the n equals timeout seconds,the default value is 15 seconds, you can modify it's value by setting `-t` or `--timeout` options.
+For example, let's test to see if we can access port 80 on www.baidu.com, and if it is available, the script will print the successful message `wait-for-it.py: www.baidu.com:80 is available after n seconds`,where the n is the waiting seconds,otherwise it will output the timeout message `wait-for-it.py: timeout occurred after waiting n seconds for wait-for-it.py`,where the n equals timeout seconds,the default value is 15 seconds, you can modify its value by setting `-t` or `--timeout` options.
 
 ```
 $ python wait-for-it.py www.baidu.com:80
